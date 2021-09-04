@@ -26,7 +26,7 @@ import BmiControls from './components/BmiControls';
 import InputControl from './components/InputControl'
 
 import { useRef, useState } from 'react';
-import { calculatorOutline, refreshOutline } from 'ionicons/icons';
+import BmiResult from './components/BmiResult';
 
 const App: React.FC = () => {
   const [ calculatedBMI, setCalculatedBMI ]  = useState<number>();
@@ -37,8 +37,8 @@ const App: React.FC = () => {
   const [ calcUnits, setCalcUnits ] = useState<'cmkg' | 'ftlbs'>('cmkg');
 
   const calculateBMI = () =>{
-    const enteredWeight = weightInputRef.current!.value;
-    const enteredHeight = heightInputRef.current!.value;
+    let enteredWeight = weightInputRef.current!.value;
+    let enteredHeight = heightInputRef.current!.value;
 
     if(!enteredHeight || !enteredWeight || +enteredHeight <= 0 || +enteredWeight <= 0) {
       setError('Please enter a valid (non-negative) input number');
@@ -46,6 +46,11 @@ const App: React.FC = () => {
     }
 
     if(!enteredHeight || !enteredWeight) return;
+
+    if(calcUnits !== 'cmkg'){
+      enteredHeight = +enteredHeight * 30.48;
+      enteredWeight = +enteredWeight / 2.2; 
+    }
 
     const bmi = +enteredWeight / ((+enteredHeight/100) * (+enteredHeight/100))
 
@@ -112,16 +117,8 @@ const App: React.FC = () => {
               </IonCol>
             </IonRow>
             <BmiControls onCalculate={calculateBMI} onReset={resetInputs}/>
-            {calculatedBMI && <IonRow>
-              <IonCol>
-                <IonCard className="ion-text-center">
-                  <IonCardContent>
-                    <h2>{calculatedBMI}</h2>
-                    <h1>{BMIresult}</h1>
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-            </IonRow>}
+            {calculatedBMI && BMIresult &&
+            <BmiResult bmi={calculatedBMI} hasil={BMIresult} />}
           </IonGrid>
         </IonContent>
       </IonApp>
