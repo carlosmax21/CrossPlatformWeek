@@ -1,0 +1,154 @@
+.card-img {
+    width: 100%;
+    height: auto;
+  }
+  
+.img-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+ion-card{
+  display: flex;
+  flex-direction: column;
+  width: 90% !important;
+  margin: 0;
+  margin-bottom: 10px !important;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30%;
+}
+
+.card-review{
+  width: 200px;
+  height: auto;
+  background-color: rgb(0, 65, 0);
+}
+
+.white-text{
+  color: white !important;
+  font-size: 30pt;
+  font: bold;
+  padding: 10px;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 19px;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.explore-image-title {
+  position: absolute;
+  bottom: 10px;
+  left: 19px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.explore-card-title {
+  position: absolute;
+  bottom:150px;
+  left: 19px;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.explore-card-subtitle {
+  position: absolute;
+  bottom: 110px;
+  left: 19px;
+  font-size: 1.0em;
+  color: #fff;
+}
+
+.explore-card-title-short {
+  position: absolute;
+  bottom:140px;
+  left: 19px;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.explore-card-subtitle-short {
+  position: absolute;
+  bottom: 100px;
+  left: 19px;
+  font-size: 1.0em;
+  color: #fff;
+}
+
+.explore-button {
+  position: absolute;
+  bottom: 30px;
+  left: 19px;
+  font-size: 1.0em;
+  color: #fff;
+}
+
+.img-search{
+  height: 100%;
+}
+
+.btn-search {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  height: 50px;
+  width: 200px;
+  color: white;
+}
+
+.searchbar-input.sc-ion-searchbar-md {
+  border-radius: 25px;
+  background-position: left 8px center;
+  height: auto;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #7f8490;
+  background-color: transparent;
+  -webkit-box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1) !important;
+}
+
+.plan-segment{
+  max-width: 80%;
+}
+
+.saves-title{
+  padding-bottom: 10px;
+  font-size: 15px;
+  font: bold;
+}
+
+.saves-subtitle{
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.text-area{
+  --background: rgb(88, 88, 88);
+  color: white;
+  --border-radius: 20%;
+}
+
+.item-avatar  {     
+  width:100% !important;  
+  height : 100% !important;  
+  max-width: 40px !important;  
+  max-height: 40px !important;  
+}
+
+
